@@ -14,7 +14,10 @@ Katsoin verkkorajapintani nimen Wiresharkin yläpalkista, jossa keskellä lukee 
 
 TCP/IP-mallin neljä kerrosta Wiresharkilla analysoidusta paketista
 Sieppasin Wiresharkilla komennon ping wiki.archlinux.org aikana tapahtuvaa liikennettä. Analysoitavaksi paketiksi valitsin DNS-kyselypaketin.
-Kuva 1. Kuvassa laatikoituna TCP/IP-pinon neljä kerrosta
+
+![image](https://github.com/user-attachments/assets/a027ed4b-8de0-419c-a277-0a2d3628253b)
+Kuvassa laatikoituna TCP/IP-pinon neljä kerrosta
+
 Ensimmäinen laatikoitu kerros, merkattu numerolla 1. on linkkikerros. 
 Numerolla 2. merkattu laatikko on verkkokerros, jossa näkyy, että käytössä on IP-protokollan versio 4. 
 Kolmantena on laatikoitu kuljetuskerros, jossa protokollana UDP sekä viimeisessä laatikoituna on sovelluskerros.
@@ -51,16 +54,22 @@ Edellämainitsemani Avain-arvo parit ovat siis JA3 fingerprint:ejä.
 
 Etsin työkalun, jolla voi hakea tunnettuja JA3 fingerprintejä ja haun tulokseksi sain tiedot Firefox-selaimen eri versioita. Tämän tiedon perusteella oletan käyttäjän käyttäneen myös Firefox-selainta.
 
-Kuva: ![image](https://github.com/user-attachments/assets/478bdfa4-6a73-4e26-9434-f3cb19c006fc)
+![image](https://github.com/user-attachments/assets/478bdfa4-6a73-4e26-9434-f3cb19c006fc)
  Kuvakaappaus sivulta https://ja3.zone, jossa suoritettu haku edellämainitulle JA3 fingerprint:ille
 
 Oman verkkoliikenteen analysointi
 
 Käynnistin Wiresharkissa pakettien sieppauksen ja ajoin komentorivillä komennon ping google.com, jonka jälkeen lopetin pakettien sieppauksen. Rajoitin kaappauksen kahdeksaan pakettiin demonstroidakseni ping-komennosta johtuvaa liikennettä.
-Kuva 3. Kuvassa sieppaamani verkkoliikenne
+
+![image](https://github.com/user-attachments/assets/39da58eb-86d5-4248-9076-2ec95de8ac01)
+Kuvassa sieppaamani verkkoliikenne
+
 Verkkoliikenne alkaa kahdella DNS-kyselyllä. Ensimmäinen paketti kysyy kohteen google.com IPv4 osoitetta sillä pakein DNS-tietue on tyyppiä A.
 Tietuetyyppi on merkitty Wiresharkissa paketin info-kenttään.
-Kuva 3. Kuvassa korostettu DNS-tietuetyypi A ja AAAA
+
+![image](https://github.com/user-attachments/assets/faedb17e-4c33-4892-9bc1-d66daa0d4456)
+Kuvassa korostettu DNS-tietuetyypi A ja AAAA
+
 A-tyyppinen DNS-tietue sisältää IPv4-osoitteen ja sitä käytetään IP-osoitehakuihin (cloudflare).
 Paketti numero 2 kysyy kohteen Ipv6-osoitetta, sillä sen DNS-tietue tyyppi on AAAA. Kuten myös tätäkin tietuetyyppiä käytetään IP-osoitehakuihin.
 DNS-kyselyiden jälkeen verkkoliikenteessä näkyy vastaukset DNS-kyselyille. Verkkoliikenne jatkuu kahdella paketilla ICMP-liikennennettä, joka on peräisin ping komennosta. Näissä paketeissa lähetetään viesti palvelimelle ja palvelin vastaa takaisin. ICMP-protokollaa käytetään verkon tilan tarkastuksessa (MOOC s.a). 
