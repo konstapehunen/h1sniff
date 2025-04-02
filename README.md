@@ -57,7 +57,7 @@ Etsin työkalun, jolla voi hakea tunnettuja JA3 fingerprintejä ja haun tuloksek
 ![image](https://github.com/user-attachments/assets/478bdfa4-6a73-4e26-9434-f3cb19c006fc)
  Kuvakaappaus sivulta https://ja3.zone, jossa suoritettu haku edellämainitulle JA3 fingerprint:ille
 
-Oman verkkoliikenteen analysointi
+### Oman verkkoliikenteen analysointi
 
 Käynnistin Wiresharkissa pakettien sieppauksen ja ajoin komentorivillä komennon ping google.com, jonka jälkeen lopetin pakettien sieppauksen. Rajoitin kaappauksen kahdeksaan pakettiin demonstroidakseni ping-komennosta johtuvaa liikennettä.
 
