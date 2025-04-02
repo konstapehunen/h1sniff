@@ -1,10 +1,16 @@
 ## Wireshark ja Network Interface Names artikkelien tiivistys
 -Wireshark on verkkoliikenteen kaapaustyökalu
+
 -Verkkoliikennettä saadaan kaapattua valitsemalla verkkorajapinta ja käynnistämällä kaappaus
+
 -Wiresharkin tilastotyökaluilla voidaan analysoida tietoja kuten liikenteen määrä ja protokollat
+
 -Verkkoliitäntä ei ole aina fyysinen verkkokortti
+
 -localhost verkkoliitäntä ei ole fyysinen verkkokortti
+
 -systemd-pohjaiset järjestelmät nimeävät verkkoliitännät: en=Ethernet, wl=Wlan, lo=loopback
+
 -Omat verkkoliitännät saa tulostettua komennoilla ip a ja ip route
 
 ### Virtuaalikoneen internetyhteyden katkaisu ja palautus
