@@ -74,7 +74,7 @@ A-tyyppinen DNS-tietue sisältää IPv4-osoitteen ja sitä käytetään IP-osoit
 Paketti numero 2 kysyy kohteen Ipv6-osoitetta, sillä sen DNS-tietue tyyppi on AAAA. Kuten myös tätäkin tietuetyyppiä käytetään IP-osoitehakuihin.
 DNS-kyselyiden jälkeen verkkoliikenteessä näkyy vastaukset DNS-kyselyille. Verkkoliikenne jatkuu kahdella paketilla ICMP-liikennennettä, joka on peräisin ping komennosta. Näissä paketeissa lähetetään viesti palvelimelle ja palvelin vastaa takaisin. ICMP-protokollaa käytetään verkon tilan tarkastuksessa (MOOC s.a). 
 
-Lähteet
+### Lähteet
 Cloudflare - What happens in a TLS handshake? | SSL handshake https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/
 GeeksforGeeks – How To Disable A Network Interface https://www.geeksforgeeks.org/disabling-and-enabling-an-interface-on-linux-system/#how-to-disable-a-network-interface
 GeeksforGeeks – What Is MAC Address 
